@@ -13,50 +13,51 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
-    private ListView mListView_;
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import java.util.HashMap;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+public class MainActivity extends ListActivity {
+    String[] seven = {
+            "Dark Leafy Greens",
+            "Nuts",
+            "Carrots",
+            "Green Tea",
+            "Whole Grains",
+            "Fruits"};
+    String[] colors = {
+            "red",
+            "green"};
+    HashMap<String, Boolean> colorMap;
+
+    public void onCreate(Bundle savedInstanceState) {
+        colorMap= new HashMap<String, Boolean>();
+        colorMap.put(colors[0], false);
+        colorMap.put(colors[1], false);
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        ListView lstView = getListView();
+        lstView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        lstView.setTextFilterEnabled(true);
+        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, seven));
+
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        mListView_ = (ListView)findViewById(R.id.myMenu);
-        mListView_.setOnItemClickListener(this);
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+    public void onListItemClick(ListView parent, View v, int position, long id) {
+        Toast.makeText(this, "You have selected " + colors[position], Toast.LENGTH_SHORT).show();
+        colorMap.put(colors[position],!colorMap.get(colors[position]));
+        parent.setAdapter(new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_checked, colors));
+        int i =0;
+        for(String each:colors){
+            parent.setItemChecked(i,colorMap.get(each));
+            i++;
+            Log.d("Map", colors[position] + " " +colorMap.get(each));
         }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Log.d("hello", ""+id);
-        String[] colors = getResources().getStringArray(R.array.test);
-
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, colors);
-
-
-        mListView_.setAdapter(adapter);
-
 
 
 
