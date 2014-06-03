@@ -1,41 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Checklist</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string-array name="teamList">
-        <item>Atlanta Hawks</item>
-        <item>Boston Celtics</item>
-        <item>Brooklyn Nets</item>
-        <item>Charlotte Bobcats</item>
-        <item>Chicago Bulls</item>
-        <item>Cleveland Cavaliers</item>
-        <item>Dallas Mavericks</item>
-        <item>Denver Nuggets</item>
-        <item>Detroit Pistons</item>
-        <item>Golden State Warriors</item>
-        <item>Houston Rockets</item>
-        <item>Indiana Pacers</item>
-        <item>Los Angeles Clippers</item>
-        <item>Los Angeles Lakers</item>
-        <item>Memphis Grizzlies</item>
-        <item>Miami Heat</item>
-        <item>Milwaukee Bucks</item>
-        <item>Minnesota Timberwolves</item>
-        <item>New Orleans Pelicans</item>
-        <item>New York Knicks</item>
-        <item>Oklahoma City Thunder</item>
-        <item>Orlando Magic</item>
-        <item>Philadelphia 76ers</item>
-        <item>Phoenix Suns</item>
-        <item>Portland Trail Blazers</item>
-        <item>Sacramento Kings</item>
-        <item>San Antonio Spurs</item>
-        <item>Toronto Raptors</item>
-        <item>Utah Jazz</item>
-        <item>Washington Wizards</item>
+    <string-array name="main_menu">
+        <item>"AgeDistribution"</item>
+        <item>"CensusElements"</item>
+        <item>"Error"</item>
+        <item>"EthnicDistribution"</item>
+        <item>"IncomeDistribution"</item>
+        <item>"OtherInformation"</item>
+        <item>"RaceDistribution"</item>
+        <item>"UrbanClassification"</item>
     </string-array>
+    <string-array name= "AgeDistribution">
+        <item>"percentUnder5"</item>
+        <item>"percent5To9"</item>
+        <item>"percent10To14"</item>
+        <item>"percent15To19"</item>
+        <item>"percent20To24"</item>
+        <item>"percent25To34"</item>
+        <item>"percent35To44"</item>
+        <item>"percent45To54"</item>
+        <item>"percent55To59"</item>
+        <item>"percent60To64"</item>
+        <item>"percent65To74"</item>
+        <item>"percent75To84"</item>
+        <item>"percent85AndOver"</item>
+        <item>"percent18AndOver"</item>
+        <item>"percent21AndOver"</item>
+        <item>"percent62AndOver"</item>
+        <item>"percent65AndOver"</item>
+        <item>"medianAge"</item>
+        <item>"resolutionLevel"</item>
+    </string-array>
+    <string-array name="IncomeDistribution">
+        <item>"percentUnder10000"</item>
+        <item>"percent10000To14999"</item>
+        <item>"percent15000To24999"</item>
+        <item>"percent25000To34999"</item>
+        <item>"percent35000To49999"</item>
+        <item>"percent50000To74999"</item>
+        <item>"percent75000To99999"</item>
+        <item>"percent100000To149999"</item>
+        <item>"percent150000To199999"</item>
+        <item>"percent200000OrMore"</item>
+        <item>"medianHouseholdIncome"</item>
+        <item>"medianHouseholdIncome2008"</item>
+        <item>"resolutionLevel"</item>
+    </string-array>
+    <string-array name="RaceDistribution">
+        <item>"PercentWhite"</item>
+        <item>"PercentBlack"</item>
+        <item>"PercentAmericanIndian"</item>
+        <item>"PercentAsian"</item>
+        <item>"PercentPacificIslander"</item>
+        <item>"PercentOtherRace"</item>
+        <item>"PercentTwoOrMoreRaces"</item>
+        <item>"ResolutionLevel"</item>
+    </string-array>
+    <string-array name="EthnicDistribution">
+        <item>"percentHispanicOrLatinoOfAnyRace"</item>
+        <item>"percentNotHispanicOrLatino"</item>
+        <item>"resolutionLevel"</item>
+    </string-array>
+    <string-array name= "UrbanClassification">
+        <item>"code"</item>
+        <item>"description"</item>
+        <item>"kilometersToUrbanCenter"</item>
+    </string-array>
+    <string-array name="OtherInformation">
+        <item>"population"</item>
+        <item>"areaInSquareKilometers"</item>
+        <item>"peoplePerSquareKilometer"</item>
+        <item>"percentFemale"</item>
+        <item>"percentMale"</item>
+        <item>"resolutionLevel"</item>
+    </string-array>
+    <string-array name= "CensusElements">
+        <item>"State"</item>
+        <item>"City"</item>
+        <item>"AreaPopulation2000"</item>
+        <item>"AreaPopulationChange2005"</item>
+        <item>"AreaPopulationChange2010"</item>
+        <item>"CountyPopulation2000"</item>
+        <item>"CountyPopulationChange2005"</item>
+        <item>"CountyPopulationChange2010"</item>
+        <item>"StatePopulation2000"</item>
+        <item>"StatePopulationChange2005"</item>
+        <item>"StatePopulationChange2010"</item>
+        <item>"AreaAvgSatMath"</item>
+        <item>"AreaAvgSatEnglish"</item>
+        <item>"AreaAvgSatTotal"</item>
+        <item>"CountyAvgSatMath"</item>
+        <item>"CountyAvgSatEnglish"</item>
+        <item>"CountyAvgSatTotal"</item>
+        <item>"StateAvgSatMath"</item>
+        <item>"StateAvgSatEnglish"</item>
+        <item>"StateAvgSatTotal"</item>
+        <item>"AreaGradDegree"</item>
+        <item>"AreaBachDegree"</item>
+        <item>"AreaAssocDegree"</item>
+        <item>"AreaSomeCollege"</item>
+        <item>"AreaHighSchoolGrad"</item>
+        <item>"AreaBelowHighSchoolGrad"</item>
+        <item>"CountyGradDegree"</item>
+        <item>"CountyBachDegree"</item>
+        <item>"CountyAssocDegree"</item>
+        <item>"CountySomeCollege"</item>
+        <item>"CountyHighSchoolGrad"</item>
+        <item>"CountyBelowHighSchoolGrad"</item>
+        <item>"StateGradDegree"</item>
+        <item>"StateBachDegree"</item>
+        <item>"StateAssocDegree"</item>
+        <item>"StateSomeCollege"</item>
+        <item>"StateHighSchoolGrad"</item>
+        <item>"StateBelowHighSchoolGrad"</item>
+        <item>"AreaPersonalCrimeRisk"</item>
+        <item>"AreaPropertyCrimeRisk"</item>
+        <item>"CountyPersonalCrimeRisk"</item>
+        <item>"CountyPropertyCrimeRisk"</item>
+        <item>"StatePersonalCrimeRisk"</item>
+        <item>"StatePropertyCrimeRisk"</item>
+        <item>"AreaUnemploymentRate"</item>
+        <item>"AreaBlueCollar"</item>
+        <item>"AreaWhiteCollar"</item>
+        <item>"CountyUnemploymentRate"</item>
+        <item>"CountyBlueCollar"</item>
+        <item>"CountyWhiteCollar"</item>
+        <item>"StateUnemploymentRate"</item>
+        <item>"StateBlueCollar"</item>
+        <item>"StateWhiteCollar"</item>
+        <item>"AreaHouseholdIncome"</item>
+        <item>"AreaHouseholdSpending"</item>
+        <item>"CountyHouseholdIncome"</item>
+        <item>"CountyHouseholdSpending"</item>
+        <item>"StateHouseholdIncome"</item>
+        <item>"StateHouseholdSpending"</item>
+        <item>"AreaMedianAge"</item>
+        <item>"AreaAvgHouseholdSize"</item>
+        <item>"AreaHouseholdChildren"</item>
+        <item>"CountyMedianAge"</item>
+        <item>"CountyAvgHouseholdSize"</item>
+        <item>"CountyHouseholdChildren"</item>
+        <item>"StateMedianAge"</item>
+        <item>"StateAvgHouseholdSize"</item>
+        <item>"StateHouseholdChildren"</item>
+        <item>"AreaTempJan"</item>
+        <item>"AreaTempJuly"</item>
+        <item>"AreaRainFall"</item>
+        <item>"AreaSnowFall"</item>
+        <item>"CountyTempJan"</item>
+        <item>"CountyTempJuly"</item>
+        <item>"CountyRainFall"</item>
+        <item>"CountySnowFall"</item>
+        <item>"StateTempJan"</item>
+        <item>"StateTempJuly"</item>
+        <item>"StateRainFall"</item>
+        <item>"StateSnowFall"</item>
+    </string-array>
+    <string-array name="Error">
+        <item>"Type"</item>
+        <item>"TypeCode"</item>
+        <item>"Desc"</item>
+        <item>"DescCode"</item>
+    </string-array>
+
+
+
 
     <string-array name="test">
         <item>1</item>
