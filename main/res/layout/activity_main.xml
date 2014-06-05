@@ -10,13 +10,12 @@
     tools:context="edu.ucsb.cs.cs185.jason06.Checklist.MainActivity"
         >
 
-        <ListView android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:id = "@+id/myMenu"
-                  android:entries="@array/main_menu"
-                  android:choiceMode="multipleChoice"
-                >
-        </ListView>
+    <fragment android:name="edu.ucsb.cs.cs185.jason06.Checklist.MainActivity$PlaceholderFragment"
+              android:id="@+id/container"
+              android:layout_weight="1"
+              android:layout_width="0dp"
+              android:layout_height="match_parent" />
+
 
 
 
