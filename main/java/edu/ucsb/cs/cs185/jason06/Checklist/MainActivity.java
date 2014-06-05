@@ -157,7 +157,7 @@ public class MainActivity extends ListActivity {
            }
            int i = 0;
            for (String each : choice) {
-               parent.setItemChecked(i, mSharedPreferences_.getBoolean(each, true));
+               parent.setItemChecked(i, mSharedPreferences_.getBoolean(each, false));
                i++;
            }
            was_main=false;
