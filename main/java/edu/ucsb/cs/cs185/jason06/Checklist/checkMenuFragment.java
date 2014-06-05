@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import android.widget.*;
 
 
-import edu.ucsb.cs.cs185.jason06.Checklist.dummy.DummyContent;
+
 
 /**
  * A fragment representing a list of Items.
@@ -131,6 +131,19 @@ public class checkMenuFragment extends ListFragment {
         return false;
         //return super.onKeyDown(keyCode, event);
     }
+
+    public boolean allowBack()
+    {
+        if (mMode_ != MAINMENU)
+        {
+            mMode_ = MAINMENU;
+            setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, mMain_menu_));
+
+            return false;
+        }
+        return true;
+    }
+
 
     public void onListItemClick(ListView parent, View v, int position, long id) {
 //I have arranged it so that the position in mainmenu is equal to the constants for the submenus

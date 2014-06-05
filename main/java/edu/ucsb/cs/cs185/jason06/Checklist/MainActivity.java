@@ -10,6 +10,7 @@ import android.view.*;
 
 public class MainActivity extends ActionBarActivity {
     private checkMenuFragment mCheckList_;
+    final static String MYTAG = "mytag";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.blank_fragment, container, false);
+             View rootView = inflater.inflate(R.layout.blank_fragment, container, false);
             return rootView;
         }
 
@@ -61,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
                 for (int i = 0; i < fm.getBackStackEntryCount(); i++) {
                     fm.popBackStack();
                 }
-                fragmentTransaction.replace(R.id.container, mCheckList_);
+                fragmentTransaction.replace(R.id.container, mCheckList_, MYTAG);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
@@ -75,6 +76,17 @@ public class MainActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        final checkMenuFragment fragment=
+                (checkMenuFragment)getSupportFragmentManager().findFragmentByTag(MYTAG);
+        if (fragment.allowBack())
+        {
+            super.onBackPressed();
+        }
     }
 
 
