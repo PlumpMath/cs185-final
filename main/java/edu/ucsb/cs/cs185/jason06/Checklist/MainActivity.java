@@ -1,29 +1,64 @@
 package edu.ucsb.cs.cs185.jason06.Checklist;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.*;
 
+/**
+ * Created by jason on 6/10/14.
+ */
+
+//
+//import android.app.Activity;
+//        import android.content.Intent;
+//        import android.os.Bundle;
+//        import android.util.Log;
+//        import android.view.View;
+//        import android.widget.Button;
+//        import android.widget.TextView;
+//
+//
+//
+//
+//public class SecondActivity extends Activity {
+//    /** Called when the activity is first created. */
+//
+//
+//
+//    public void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.blank_fragment);
+//
+//
+//
+//        Intent i = getIntent();
+//        // Receiving the Data
+//        Log.e("Second Screen", "Second Screen");
+//
+//
+//
+//    }
+
+//
+//}
 public class MainActivity extends ActionBarActivity {
-    private checkMenuFragment mCheckList_;
-    final static String MYTAG = "mytag";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.blank_fragment);
 
     }
     @Override
 
     public boolean onCreateOptionsMenu(Menu menu) {
 
-                // Inflate the menu; this adds items to the action bar if it is present.
-                getMenuInflater().inflate(R.menu.main, menu);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -38,7 +73,7 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-             View rootView = inflater.inflate(R.layout.blank_fragment, container, false);
+            View rootView = inflater.inflate(R.layout.blank_fragment, container, false);
             return rootView;
         }
 
@@ -55,16 +90,9 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             try {
+                Intent intent = new Intent(this, SecondActivity.class);
+                startActivity(intent);
 
-                mCheckList_ = new checkMenuFragment();
-                FragmentManager fm = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fm.beginTransaction();
-                for (int i = 0; i < fm.getBackStackEntryCount(); i++) {
-                    fm.popBackStack();
-                }
-                fragmentTransaction.replace(R.id.container, mCheckList_, MYTAG);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
 
             }
             catch(Exception e) {
@@ -78,16 +106,8 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBackPressed()
-    {
-        final checkMenuFragment fragment=
-                (checkMenuFragment)getSupportFragmentManager().findFragmentByTag(MYTAG);
-        if (fragment.allowBack())
-        {
-            super.onBackPressed();
-        }
-    }
+
+
 
 
 
